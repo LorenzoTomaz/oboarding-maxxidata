@@ -1,0 +1,182 @@
+{
+  "name": "onboarding-maxxidata-demo",
+  "version": "0.1.24-rc",
+  "private": true,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired --env=jsdom",
+    "qa": "PORT=8081 react-scripts start",
+    "lint": "xo --quiet",
+    "lint:fix": "xo --quiet --write src/**/*.js",
+    "format:root": "prettier --write src/*.js",
+    "format:primary": "prettier --write src/**/*.{js,jsx}",
+    "format:secondary": "prettier --write src/**/**/*.{js,jsx}",
+    "format:third": "prettier --write src/**/**/**/*.{js,jsx}",
+    "format": "yarn format:root && yarn format:primary && yarn format:secondary && yarn format:third"
+  },
+  "dependencies": {
+    "@amcharts/amcharts3-react": "^3.1.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-solid-svg-icons": "^5.10.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@nivo/bar": "^0.59.2",
+    "@nivo/line": "^0.59.3",
+    "@nivo/pie": "^0.59.1",
+    "@types/react-big-calendar": "^0.24.0",
+    "amcharts3": "^3.21.13",
+    "antd": "^3.11.6",
+    "antd-mask-input": "^0.1.10",
+    "antd-theme-webpack-plugin": "^1.1.6",
+    "apexcharts": "^3.19.2",
+    "apisauce": "^1.1.0",
+    "axios": "^0.19.0",
+    "busca-cep": "^0.5.0",
+    "connected-react-router": "^6.5.2",
+    "draftjs-to-html": "^0.8.4",
+    "formik": "^2.1.2",
+    "instantsearch.css": "^7.1.0",
+    "leaflet": "^1.6.0",
+    "less": "2.7.3",
+    "less-loader": "^4.1.0",
+    "less-vars-to-js": "^1.2.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.22.2",
+    "nivo": "^0.31.0",
+    "nprogress": "^0.2.0",
+    "password-validator": "^5.0.2",
+    "prop-types": "^15.6.2",
+    "query-string": "^6.8.3",
+    "react": "^16.4.1",
+    "react-apexcharts": "^1.3.7",
+    "react-beautiful-dnd": "^13.0.0",
+    "react-big-calendar": "^0.23.0",
+    "react-bootstrap-sweetalert": "^4.4.1",
+    "react-ckeditor-component": "^1.0.7",
+    "react-color": "^2.14.1",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dnd": "^5.0.0",
+    "react-dnd-html5-backend": "^5.0.1",
+    "react-dom": "^16.4.1",
+    "react-draft-wysiwyg": "^1.12.13",
+    "react-extras": "^1.0.1",
+    "react-flip-move": "^3.0.2",
+    "react-google-maps": "^9.4.5",
+    "react-hot-loader": "^4.6.3",
+    "react-input-mask": "^2.0.4",
+    "react-instantsearch": "^5.2.2",
+    "react-instantsearch-dom": "^5.2.2",
+    "react-intl": "^2.4.0",
+    "react-leaflet": "^2.6.1",
+    "react-notifications": "^1.4.3",
+    "react-placeholder": "^3.0.1",
+    "react-redux": "^7.0.2",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "^2.1.3",
+    "react-simple-maps": "^0.12.1",
+    "react-slick": "^0.23.1",
+    "react-sortable-hoc": "^0.8.3",
+    "react-star-rating-component": "^1.4.1",
+    "reactotron-apisauce": "^3.0.0",
+    "reactotron-react-js": "^3.3.2",
+    "reactotron-redux": "^3.1.1",
+    "reactotron-redux-saga": "^4.2.2",
+    "recharts": "^1.0.1",
+    "redux": "^4.0.1",
+    "redux-persist": "^6.0.0",
+    "redux-saga": "^1.0.2",
+    "rheostat": "^3.0.1",
+    "slick-carousel": "^1.8.1",
+    "url-search-params": "^1.1.0",
+    "vanilla-masker": "^1.2.0",
+    "victory": "^0.27.2",
+    "yup": "^0.27.0"
+  },
+  "devDependencies": {
+    "add": "^2.0.6",
+    "babel-plugin-import": "^1.8.0",
+    "customize-cra": "^0.2.10",
+    "eslint": "5.12.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-react-app": "^5.2.0",
+    "eslint-plugin-flowtype": "^4.6.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-import-helpers": "^1.0.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "react-app-rewired": "^2.1.5",
+    "xo": "^0.27.2"
+  },
+  "xo": {
+    "parser": "babel-eslint",
+    "extends": [
+      "prettier",
+      "prettier/react",
+      "plugin:react/recommended"
+    ],
+    "plugins": [
+      "jsx-a11y",
+      "eslint-plugin-import-helpers"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": 0,
+      "import/no-unassigned-import": 0,
+      "import/no-unresolved": 0,
+      "unicorn/filename-case": 0,
+      "react/no-deprecated": 0,
+      "no-negated-condition": 0,
+      "no-prototype-builtins": 0,
+      "no-undef": 0,
+      "react/prop-types": 0,
+      "import-helpers/order-imports": [
+        "warn",
+        {
+          "newlinesBetween": "always",
+          "groups": [
+            "/^react/",
+            "module",
+            [
+              "parent",
+              "sibling",
+              "index"
+            ],
+            "/^css/",
+            "/^less/"
+          ],
+          "alphabetize": {
+            "order": "asc",
+            "ignoreCase": true
+          }
+        }
+      ]
+    },
+    "globals": [
+      "expect",
+      "it",
+      "describe",
+      "localStorage"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint",
+      "prettier --semi false --single-quote --print-width 120 --tab-width 2 --write",
+      "git add"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

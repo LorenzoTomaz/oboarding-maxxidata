@@ -1,0 +1,133 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: myapp
+  description: Onboarding MaxxiData App
+basePath: /api/v1
+tags:
+  - name: Members
+    description:  members endpoints
+  - name: TypeMembers
+    description:  members type endpoints
+  - name: Specification
+    description: The swagger API specification
+
+consumes:
+  - application/json
+produces:
+  - application/json
+
+
+definitions:
+  TypeMemberBody:
+    type: object
+    title: typeMember
+    required:
+      - descricao
+      - situacao
+    properties:
+      descricao:
+        type: string
+      situacao:
+        type: string
+  MemberBody:
+    type: object
+    title: Member
+    required:
+      - nome
+      - email
+      - situacao
+      - type_member_id
+    properties:
+      nome:
+        type: string
+      email:
+        type: string
+      situacao:
+        type: string
+      type_member_id:
+        type: integer
+
+
+paths:
+  /type_members:
+    get:
+      tags:
+        - TypeMembers
+      description: Fetch all members type
+      responses:
+        200:
+          description: Returns all members type
+    post:
+      tags:
+        - TypeMembers
+      description: Create a new member type
+      parameters:
+        - name: title
+          in: body
+          description: an example
+          required: true
+          schema:
+            $ref: "#/definitions/TypeMemberBody"
+      responses:
+        201:
+          description: Returns all examples
+  /type_members/{id}:
+    get:
+      tags:
+        - TypeMembers
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the example to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the members type with the specified id
+        404:
+          description: member type not found
+  /members:
+    get:
+      tags:
+        - Members
+      description: Fetch all members
+      responses:
+        200:
+          description: Returns all members
+    post:
+      tags:
+        - Members
+      description: Create a new member
+      parameters:
+        - name: title
+          in: body
+          description: an example
+          required: true
+          schema:
+            $ref: "#/definitions/MemberBody"
+      responses:
+        201:
+          description: Returns created member
+  /members/{id}:
+    get:
+      tags:
+        - Members
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The members id to retrieve
+          type: integer
+      responses:
+        200:
+          description: Return the member with the specified id
+        404:
+          description: member not found
+  /spec:
+    get:
+      tags:
+        - Specification
+      responses:
+        200:
+          description: Return the API specification
