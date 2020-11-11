@@ -6,8 +6,12 @@ import * as http from 'http';
 import * as os from 'os';
 import l from './logger';
 import oas from './swagger';
+var cors = require('cors')
 
 const app = new Express();
+
+
+app.use(cors())
 
 export default class ExpressServer {
   constructor() {

@@ -7,7 +7,7 @@ services:
       - webnet
   db:
     image: postgres
-    container_name: my_database
+    container_name: my_db
     expose:
     - "5432"
     ports:
@@ -18,7 +18,7 @@ services:
       POSTGRES_PASSWORD: 123456
       POSTGRES_USER: user
       POSTGRES_DB: db_name
-      DB_HOST: my_database
+      DB_HOST: my_db
 
 networks:
   webnet:

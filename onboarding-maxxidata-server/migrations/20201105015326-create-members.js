@@ -20,10 +20,10 @@ module.exports = {
       type_member_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: {         // members belongsTo type_members 1:1
+        /* references: {         // members belongsTo type_members 1:1
           model: 'type_members',
           key: 'id'
-        }
+        } */
       },
       endereco: {
         type: Sequelize.TEXT

@@ -11,11 +11,11 @@ const db = {};
   username: 'user',
   password: '123456',
   database: 'db_name',
-  host: 'my_database',
+  host: 'my_db',
   dialect: 'postgres',
   port: 5432
-} */
-/* let sequelize = new Sequelize(config.development.database, config.development.username, config.development.password, config.development); */
+}
+let sequelize = new Sequelize(config.database, config.username, config.password, config); */
 let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);

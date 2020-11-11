@@ -7,18 +7,18 @@ services:
       - webnet
   db:
     image: postgres
-    container_name: my_database
+    container_name: my_db
     expose:
     - "5432"
     ports:
-      - "35432:5432"
+      - "5432:5432"
     networks:
       - webnet
     environment:
       POSTGRES_PASSWORD: 123456
       POSTGRES_USER: user
       POSTGRES_DB: db_name
-      DB_HOST: my_database
+      DB_HOST: my_db
   web:
     image: my-node-app
     volumes:
@@ -28,14 +28,12 @@ services:
     expose:
       - "5432"
     external_links:
-      - my_database
+      - my_db
     ports:
       - "3000:3000"
     networks:
       - webnet
     restart: always
-    environment:
-      DB_HOST: my_database
     depends_on:
       - db
       - redis
